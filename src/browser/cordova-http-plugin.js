@@ -182,7 +182,7 @@ function sendRequest(method, withData, opts, success, failure) {
 
   reqMap[reqId] = xhr;
 
-  xhr.open(method, url);
+  xhr.open(method.toUpperCase(), url);
 
   if (headers.Cookie && headers.Cookie.length > 0) {
     return onFail('advanced-http: custom cookies not supported on browser platform');
